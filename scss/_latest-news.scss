@@ -17,17 +17,23 @@
     gap: 8.5rem;
   }
   &__item {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
     &-image {
       @include mixins.image-cover;
       @include mixins.image-decor;
       position: relative;
+      transition: all 0.2s ease-in-out;
       img {
+        position: relative;
+        z-index: 1;
         border-radius: variables.$image-decor-border-radius-2;
       }
       &::after {
         top: 3%;
         left: 3%;
         border-radius: variables.$image-decor-border-radius-2;
+        z-index: 0;
       }
     }
     &-title {
@@ -39,6 +45,30 @@
     &-description {
       font-size: variables.$text-font-size;
       margin: 1rem 0 2.8rem;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: all 0.2s ease-in-out;
     }
+    &-button {
+      transition: all 0.1s ease-in-out;
+      transform: translateY(-150%);
+    }
+    &:hover {
+      .latest-news__item-image {
+        scale: 1.05;
+      }
+      .latest-news__item-description {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .latest-news__item-button {
+        transform: translateY(0);
+      }
+    }
+  }
+  &__item--show {
+    opacity: 1;
   }
 }

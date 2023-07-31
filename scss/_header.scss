@@ -1,12 +1,13 @@
 @use "mixins";
 @use "variables";
+@use "progress-bar";
 .header {
-  padding: 10px 0 5px;
   position: sticky;
   z-index: 5;
   top: 0;
   background-color: variables.$bg-color-1;
   &__inner {
+    padding: 10px 0 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,8 +34,8 @@
     border-radius: 20px;
     transition: outline-color 0.3s ease-in-out, color 0.2s ease-in-out;
     &:hover {
-        color: variables.$button-hover-color;
-        outline-color: variables.$button-bg-color;
+      color: variables.$button-hover-color;
+      outline-color: variables.$button-bg-color;
     }
   }
   &__sign-up-button {

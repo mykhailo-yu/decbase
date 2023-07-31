@@ -5,7 +5,7 @@
   margin-top: 10rem;
   &__sub-title {
     @include mixins.subtitle;
-    font-weight: variables.$font-weight-semibold
+    font-weight: variables.$font-weight-semibold;
   }
   &__title {
     @include mixins.title;
@@ -64,21 +64,25 @@
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.14);
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     &-image {
-        position: absolute;
-        top: 1.8rem;
-        left: 1.7rem;
-        width: 2.5rem;
-        height: 2rem;
-        @include mixins.image-contain;
+      position: absolute;
+      top: 1.8rem;
+      left: 1.7rem;
+      width: 2.5rem;
+      height: 2rem;
+      @include mixins.image-contain;
     }
     &-title {
       font-size: 1.4rem;
       color: variables.$titles-main-color;
       font-weight: variables.$font-weight-medium;
       transition: color 0.2s ease-in-out;
+      max-height: 2rem;
+      overflow: hidden;
     }
     &-description {
-        font-size: 0.9rem;
+      font-size: 0.9rem;
+      max-height: 4.7rem;
+      overflow: hidden;
     }
     &:hover {
       background-color: variables.$our-service-hover-bg;

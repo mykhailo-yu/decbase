@@ -46,6 +46,9 @@
             </nav>
           </div>
         </div>
+        <div class="progress-bar__wrapper">
+          <div class="progress-bar" id="scrollBar"></div>
+        </div>
       </header>
       <main>
         <section class="modern-interior" id="project">
@@ -72,28 +75,28 @@
         <section class="our-services" id="services">
           <div class="container">
             <div class="our-services__sub-title">WHAT WE DO</div>
-            <div class="our-services__title">Our Service</div>
+            <div class="our-services__title">Our Users</div>
             <ul class="our-services__filter-buttons">
               <li>
                 <button
-                  class="button our-services__filter-btn our-service__filter-btn--active"
+                  id="all" class="button our-services__filter-btn our-services__filter-btn--active"
                 >
                   ALL
                 </button>
               </li>
               <li>
-                <button class="button our-services__filter-btn">
-                  INTERIOR DESIGN
+                <button id="1" class="button our-services__filter-btn">
+                  User 1
                 </button>
               </li>
               <li>
-                <button class="button our-services__filter-btn">
-                  ARCHITECTURE
+                <button id="2" class="button our-services__filter-btn">
+                  User 2
                 </button>
               </li>
               <li>
-                <button class="button our-services__filter-btn">
-                  PLANNING
+                <button id="3" class="button our-services__filter-btn">
+                  User 3
                 </button>
               </li>
             </ul>
@@ -227,82 +230,94 @@
             <div class="testimonials-slider">
               <div class="swiper">
                 <div class="swiper-wrapper">
-                  <div class="testimonials-slider__item swiper-slide">
-                    <div class="testimonials-slider__item-image">
-                      <img src="img/testimonial1.png" alt="Client" />
-                    </div>
-                    <div class="testimonials-slider__item-title">
-                      Louis Saville<span>/CEO at Google Inc</span>
-                    </div>
-                    <div class="testimonials-slider__item-description">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </div>
-                  </div>
-                  <div class="testimonials-slider__item swiper-slide">
-                    <div class="testimonials-slider__item-image">
-                      <img src="img/testimonial2.png" alt="Client" />
-                    </div>
-                    <div class="testimonials-slider__item-title">
-                      Rekha Varadwaz<span>/Manager at Nike inc</span>
-                    </div>
-                    <div class="testimonials-slider__item-description">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                  <div class="testimonials-slider__item-wrapper swiper-slide">
+                    <div class="testimonials-slider__item">
+                      <div class="testimonials-slider__item-image">
+                        <img src="img/testimonial1.png" alt="Client" />
+                      </div>
+                      <div class="testimonials-slider__item-title">
+                        Louis Saville<span>/CEO at Google Inc</span>
+                      </div>
+                      <div class="testimonials-slider__item-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                      </div>
                     </div>
                   </div>
-                  <div class="testimonials-slider__item swiper-slide">
-                    <div class="testimonials-slider__item-image">
-                      <img src="img/testimonial2.png" alt="Client" />
-                    </div>
-                    <div class="testimonials-slider__item-title">
-                      Maria Varadwaz<span>/Manager at Nike inc</span>
-                    </div>
-                    <div class="testimonials-slider__item-description">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </div>
-                  </div>
-                  <div class="testimonials-slider__item swiper-slide">
-                    <div class="testimonials-slider__item-image">
-                      <img src="img/testimonial2.png" alt="Client" />
-                    </div>
-                    <div class="testimonials-slider__item-title">
-                      Olha Varadwaz<span>/Manager at Nike inc</span>
-                    </div>
-                    <div class="testimonials-slider__item-description">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                  <div class="testimonials-slider__item-wrapper swiper-slide">
+                    <div class="testimonials-slider__item">
+                      <div class="testimonials-slider__item-image">
+                        <img src="img/testimonial2.png" alt="Client" />
+                      </div>
+                      <div class="testimonials-slider__item-title">
+                        Rekha Varadwaz<span>/Manager at Nike inc</span>
+                      </div>
+                      <div class="testimonials-slider__item-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                      </div>
                     </div>
                   </div>
-                  <div class="testimonials-slider__item swiper-slide">
-                    <div class="testimonials-slider__item-image">
-                      <img src="img/testimonial2.png" alt="Client" />
-                    </div>
-                    <div class="testimonials-slider__item-title">
-                      Kamila Varadwaz<span>/Manager at Nike inc</span>
-                    </div>
-                    <div class="testimonials-slider__item-description">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                  <div class="testimonials-slider__item-wrapper swiper-slide">
+                    <div class="testimonials-slider__item">
+                      <div class="testimonials-slider__item-image">
+                        <img src="img/testimonial2.png" alt="Client" />
+                      </div>
+                      <div class="testimonials-slider__item-title">
+                        Olha Varadwaz<span>/Manager at Nike inc</span>
+                      </div>
+                      <div class="testimonials-slider__item-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                      </div>
                     </div>
                   </div>
-                  <div class="testimonials-slider__item swiper-slide">
-                    <div class="testimonials-slider__item-image">
-                      <img src="img/testimonial2.png" alt="Client" />
+                  <div class="testimonials-slider__item-wrapper swiper-slide">
+                    <div class="testimonials-slider__item">
+                      <div class="testimonials-slider__item-image">
+                        <img src="img/testimonial2.png" alt="Client" />
+                      </div>
+                      <div class="testimonials-slider__item-title">
+                        Kamila Varadwaz<span>/Manager at Nike inc</span>
+                      </div>
+                      <div class="testimonials-slider__item-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                      </div>
                     </div>
-                    <div class="testimonials-slider__item-title">
-                      Roxa Varadwaz<span>/Manager at Nike inc</span>
+                  </div>
+                  <div class="testimonials-slider__item-wrapper swiper-slide">
+                    <div class="testimonials-slider__item">
+                      <div class="testimonials-slider__item-image">
+                        <img src="img/testimonial2.png" alt="Client" />
+                      </div>
+                      <div class="testimonials-slider__item-title">
+                        Roxa Varadwaz<span>/Manager at Nike inc</span>
+                      </div>
+                      <div class="testimonials-slider__item-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                      </div>
                     </div>
-                    <div class="testimonials-slider__item-description">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                  </div>
+                  <div class="testimonials-slider__item-wrapper swiper-slide">
+                    <div class="testimonials-slider__item">
+                      <div class="testimonials-slider__item-image">
+                        <img src="img/testimonial2.png" alt="Client" />
+                      </div>
+                      <div class="testimonials-slider__item-title">
+                        Valeria Varadwaz<span>/Manager at Nike inc</span>
+                      </div>
+                      <div class="testimonials-slider__item-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -364,7 +379,7 @@
               Find out early about all upcoming promotions and new product
               releases with our newsletter.
             </div>
-            <form action="" class="sign-up-form">
+            <form action="javascript:void(0)" class="sign-up-form">
               <div class="sign-up-form__input-name">
                 <input
                   type="text"
@@ -521,10 +536,27 @@
           reserved.
         </div>
       </footer>
+      <div class="is-user-here">
+        <div class="is-user-here__text">Ви ще тут?</div>
+        <button class="button is-user-here__button">Так</button>
+      </div>
+    </div>
+    <div class="congratulations__wrapper">
+      <div class="congratulations">
+        Вітаємо! Саме сьогодні 
+        <span class="congratulations__date"></span> 
+        для користувачів із іменем 
+        <span class="congratulations__name"></span>
+        при оформленні замовлення 120% знижка
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/form.js"></script>
     <script src="js/year.js"></script>
+    <script src="js/progress-bar.js"></script>
+    <script src="js/latest-news.js"></script>
+    <script src="js/useractivity.js"></script>
+    <script src="js/infoFromJSON.js"></script>
   </body>
 </html>

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500&family=Raleway:wght@500&display=swap");
 html {
   scroll-behavior: smooth;
-  //font-size: 1vw;
+  font-size: 16px;
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -11,7 +11,7 @@ body {
   background-color: variables.$bg-color-1;
 }
 .container {
-  width: 80vw;
+  width: 80%;
   margin: 0 auto;
 }
 .button {
