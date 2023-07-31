@@ -1,0 +1,14 @@
+@use "mixins";
+@use "variables";
+@use "testimonials-slider";
+.testimonials {
+  padding: 8rem 0;
+  &__subtitle {
+    @include mixins.subtitle;
+    text-align: center;
+  }
+  &__title {
+    @include mixins.title;
+    text-align: center;
+  }
+}

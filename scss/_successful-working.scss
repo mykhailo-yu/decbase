@@ -1,0 +1,36 @@
+@use "mixins";
+@use "variables";
+.successful-working {
+  margin-top: 10rem;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__transparent-text {
+    font-size: 15rem;
+    line-height: 12rem;
+    font-weight: variables.$font-weight-bold;
+    color: transparent;
+    background-image: url(../img/20years.png);
+    background-clip: text;
+  }
+  &__title {
+    @include mixins.title;
+    margin: 1.5rem 0;
+  }
+  &__info {
+  }
+  &__image {
+    @include mixins.image-cover;
+    @include mixins.image-decor;
+    position: relative;
+    flex: 0 0 50%;
+    img {
+      border-radius: variables.$image-decor-border-radius-1;
+    }
+    &::after {
+      top: 5%;
+      left: 5%;
+    }
+  }
+}

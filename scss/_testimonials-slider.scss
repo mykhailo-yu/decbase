@@ -1,0 +1,51 @@
+@use "mixins";
+@use "variables";
+.testimonials-slider {
+  position: relative;
+  .swiper {
+    margin-top: 5rem;
+    padding: 2rem 0 5rem 0;
+  }
+  &__btns {
+    position: absolute;
+    display: flex;
+    gap: 2rem;
+    top: -5rem;
+    right: 0;
+  }
+  &__item {
+    position: relative;
+    margin-left: 4rem;
+    //margin: 4rem;
+    max-width: 23.3rem;
+    padding: 2.5rem 2rem 3.5rem 6rem;
+    border-radius: 4.375rem 0rem;
+    background: variables.$items-bg-color;
+    box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
+  }
+  &__item-image {
+    @include mixins.image-contain;
+    width: 8rem;
+    width: 8rem;
+    img {
+      border-radius: 2.1875rem 0rem;
+    }
+    position: absolute;
+    top: 2rem;
+    left: -4rem;
+  }
+  &__item-title {
+    font-size: 1.5rem;
+    font-weight: variables.$font-weight-bold;
+    color: variables.$titles-main-color;
+    span {
+      color: variables.$text-main-color;
+      font-size: 1rem;
+      font-weight: variables.$font-weight-normal;
+    }
+  }
+  &__description {
+    font-size: variables.$text-font-size;
+    font-weight: variables.$font-weight-normal;
+  }
+}

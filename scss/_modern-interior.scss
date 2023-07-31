@@ -1,0 +1,42 @@
+@use "mixins";
+@use "variables";
+.modern-interior {
+  margin-top: 100px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5vw;
+  }
+  &__info {
+    flex: 0 0 50%;
+  }
+  &__image {
+    @include mixins.image-cover;
+    @include mixins.image-decor;
+    position: relative;
+    img {
+      border-radius: variables.$image-decor-border-radius-1;
+    }
+    &::after {
+      top: 5%;
+      left: 5%;
+    }
+  }
+  &__sub-title {
+    @include mixins.subtitle;
+    font-family: "Open Sans", sans-serif;
+    font-weight: variables.$font-weight-semibold
+  }
+  &__title {
+    @include mixins.title;
+    margin: 0.8rem 0 1.6rem;
+    font-weight: variables.$font-weight-semibold;
+    font-size: 4.5rem;
+    line-height: 4.875rem;
+  }
+  &__text {
+    @include mixins.text;
+    margin-bottom: 3rem;
+  }
+}

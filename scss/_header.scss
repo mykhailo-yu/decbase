@@ -1,0 +1,50 @@
+@use "mixins";
+@use "variables";
+.header {
+  padding: 10px 0 5px;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  background-color: variables.$bg-color-1;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    flex-shrink: 0;
+    @include mixins.image-contain;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+  }
+  &__nav-links {
+    gap: 1vw;
+    display: flex;
+  }
+  &__nav-link {
+    padding: 0 1vw;
+    font-weight: variables.$font-weight-semibold;
+    font-size: 1rem;
+    color: variables.$titles-main-color;
+    outline: 3px solid transparent;
+    border-radius: 20px;
+    transition: outline-color 0.3s ease-in-out, color 0.2s ease-in-out;
+    &:hover {
+        color: variables.$button-hover-color;
+        outline-color: variables.$button-bg-color;
+    }
+  }
+  &__sign-up-button {
+    flex-shrink: 0;
+    font-weight: variables.$font-weight-semibold;
+    font-size: 1rem;
+    padding: 5px 19px;
+    border-radius: 15px 0px;
+    color: variables.$button-main-color;
+    background-color: variables.$header-signUp-button-bg;
+    outline: 3px solid transparent;
+  }
+}

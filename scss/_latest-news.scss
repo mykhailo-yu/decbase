@@ -1,0 +1,44 @@
+@use "mixins";
+@use "variables";
+.latest-news {
+  background-color: variables.$bg-color-2;
+  padding: 6rem 0;
+  &__subtitle {
+    @include mixins.subtitle;
+    text-align: center;
+  }
+  &__title {
+    @include mixins.title;
+    margin: 0.8rem 0 2rem;
+    text-align: center;
+  }
+  &__items {
+    display: flex;
+    gap: 8.5rem;
+  }
+  &__item {
+    &-image {
+      @include mixins.image-cover;
+      @include mixins.image-decor;
+      position: relative;
+      img {
+        border-radius: variables.$image-decor-border-radius-2;
+      }
+      &::after {
+        top: 3%;
+        left: 3%;
+        border-radius: variables.$image-decor-border-radius-2;
+      }
+    }
+    &-title {
+      margin-top: 2.6rem;
+      color: variables.$titles-main-color;
+      font-size: 1.875rem;
+      font-weight: variables.$font-weight-semibold;
+    }
+    &-description {
+      font-size: variables.$text-font-size;
+      margin: 1rem 0 2.8rem;
+    }
+  }
+}
