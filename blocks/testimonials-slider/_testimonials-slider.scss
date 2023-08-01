@@ -1,0 +1,103 @@
+@use "../../scss/mixins" as mixins;
+@use "../../scss/variables" as variables;
+.testimonials-slider {
+  position: relative;
+  .swiper {
+    margin-top: 5rem;
+    padding: 2rem 0 5rem 0;
+  }
+  &__btns {
+    position: absolute;
+    display: flex;
+    gap: 2rem;
+    top: -5rem;
+    right: 4rem;
+    button {
+      transition: opacity 0.2s ease-in-out;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    padding: 2.5rem 2rem 3.5rem 6rem;
+    border-radius: 4.375rem 0rem;
+    background: variables.$items-bg-color;
+    box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
+    &::before {
+      position: absolute;
+      content: "";
+      top: 8%;
+      right: 3%;
+      background-image: url(../blocks/testimonials-slider/img/testimonals-slider__decor.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+  }
+  &__item-wrapper {
+    box-sizing: border-box;
+    padding: 0 4rem;
+  }
+  &__item-image {
+    @include mixins.image-contain;
+    width: 8rem;
+    height: 8rem;
+    img {
+      border-radius: 2.1875rem 0rem;
+    }
+    position: absolute;
+    top: calc(50% - 4rem);
+    left: -4rem;
+  }
+  &__item-title {
+    font-size: 1.5rem;
+    font-weight: variables.$font-weight-bold;
+    color: variables.$titles-main-color;
+    span {
+      color: variables.$text-main-color;
+      font-size: 0.9rem;
+      font-weight: variables.$font-weight-normal;
+    }
+  }
+  &__description {
+    font-size: variables.$text-font-size;
+    font-weight: variables.$font-weight-normal;
+  }
+}
+@media (max-width: 575.98px) {
+  .testimonials-slider {
+    &__item-wrapper {
+      padding: 0 1.4rem;
+    }
+    &__item {
+      padding: 4rem 1rem 1.2rem 1.2rem;
+      &-title {
+        font-size: 1.2rem;
+        span {
+          font-size: 0.7rem;
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+      }
+      &-description {
+        font-size: 0.9rem;
+      }
+      &-image {
+        width: 5rem;
+        height: 5rem;
+        top: calc(10% - 5rem / 2);
+        left: calc(50% - 5rem / 2);
+      }
+      &::before {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    &__btns {
+      right: calc(50% - 4rem);
+    }
+  }
+}

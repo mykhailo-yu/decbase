@@ -1,0 +1,52 @@
+@use "../../scss/mixins" as mixins;
+@use "../../scss/variables" as variables;
+.sign-up-form {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  align-items: center;
+  gap: 4rem;
+  &__input-name {
+    display: flex;
+    gap: 5rem;
+    input {
+      width: 16.5rem;
+    }
+  }
+  &__input {
+    outline: none;
+    border: none;
+    border-radius: 1.25rem 0rem;
+    background: #eeeeee;
+    padding: 1rem 0 0.8rem 1.8rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: variables.$font-weight-medium;
+    font-size: variables.$text-font-size;
+    transition: border 0.2s ease-in-out;
+    &[type="email"] {
+      width: 100%;
+    }
+    &--invalid {
+      border: 1px solid rgb(201, 0, 0);
+    }
+  }
+  &__button {
+    border-top-left-radius: 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .sign-up-form {
+    gap: 1rem;
+    &__input-name {
+      flex-direction: column;
+      gap: 1rem;
+      input {
+        width: unset;
+      }
+    }
+    &__input[type="email"] {
+      width: unset;
+    }
+  }
+}

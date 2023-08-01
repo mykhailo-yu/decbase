@@ -1,0 +1,52 @@
+@use "../../scss/mixins" as mixins;
+@use "../../scss/variables" as variables;
+.about-us {
+  margin-top: 6rem;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__sub-title {
+    @include mixins.subtitle;
+  }
+  &__title {
+    @include mixins.title;
+    margin: 3rem 0 0.5rem 0;
+  }
+  &__info {
+    padding-left: 9rem;
+    flex: 0 0 40%;
+  }
+  &__text {
+    margin-bottom: 3rem;
+  }
+  &__image {
+    @include mixins.image-cover;
+    @include mixins.image-decor;
+    position: relative;
+    flex: 0 0 40%;
+    img {
+      border-radius: variables.$image-decor-border-radius-1;
+    }
+    &::after {
+      top: -5%;
+      left: -5%;
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .about-us {
+    &__info {
+      padding: 0;
+      flex: unset;
+    }
+    &__title {
+      margin: 0;
+      @include mixins.title-mob;
+    }
+    &__image {
+      display: none;
+    }
+  }
+}

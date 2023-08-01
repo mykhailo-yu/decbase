@@ -1,0 +1,22 @@
+@use "../../scss/mixins" as mixins;
+@use "../../scss/variables" as variables;
+@use "../testimonials-slider/testimonials-slider";
+.testimonials {
+  padding: 8rem 0;
+  &__subtitle {
+    @include mixins.subtitle;
+    text-align: center;
+  }
+  &__title {
+    @include mixins.title;
+    text-align: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .testimonials {
+    padding: 3rem 0;
+    &__title {
+      @include mixins.title-mob;
+    }
+  }
+}

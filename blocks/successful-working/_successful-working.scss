@@ -1,0 +1,49 @@
+@use "../../scss/mixins" as mixins;
+@use "../../scss/variables" as variables;
+.successful-working {
+  margin-top: 10rem;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__transparent-text {
+    font-size: 15rem;
+    line-height: 12rem;
+    font-weight: variables.$font-weight-bold;
+    color: transparent;
+    background-image: url(../blocks/successful-working/img/20years.png);
+    background-clip: text;
+  }
+  &__title {
+    @include mixins.title;
+    margin: 1.5rem 0;
+  }
+  &__info {
+    flex: 0 0 45%;
+  }
+  &__image {
+    @include mixins.image-cover;
+    @include mixins.image-decor;
+    position: relative;
+    flex: 0 0 40%;
+    img {
+      border-radius: variables.$image-decor-border-radius-1;
+    }
+    &::after {
+      top: 5%;
+      left: 5%;
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .successful-working {
+    margin-top: 5rem;
+    &__image {
+      display: none;
+    }
+    &__title {
+      @include mixins.title-mob;
+    }
+  }
+}

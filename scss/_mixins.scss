@@ -28,6 +28,15 @@
 @mixin text {
   font-size: variables.$text-font-size;
 }
+@mixin subtitle-mob {
+  font-size: variables.$subtitle-font-size-mob;
+}
+@mixin title-mob {
+  font-size: variables.$title-font-size-mob;
+}
+@mixin text-mob {
+  font-size: variables.$text-font-size-mob;
+}
 @mixin image-decor {
   &::after {
     position: absolute;

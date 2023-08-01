@@ -1,0 +1,14 @@
+@use "../../scss/mixins" as mixins;
+@use "../../scss/variables" as variables;
+$height: 5px;
+.progress-bar {
+    &__wrapper {
+        background-color: variables.$bg-color-2;
+        width: 100%;
+        height: $height;
+    }
+    width: 0;
+    height: $height;
+    background-color: variables.$button-bg-color;
+    transition: width 0.2s ease-out;
+}

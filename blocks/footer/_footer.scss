@@ -1,0 +1,76 @@
+@use "../../scss/mixins" as mixins;
+@use "../../scss/variables" as variables;
+.footer {
+  background-color: variables.$bg-color-2;
+  &__inner {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    &:first-child {
+      flex: 0 0 26%;
+    }
+    &-title {
+      font-size: 1.5rem;
+      font-weight: variables.$font-weight-medium;
+      color: variables.$titles-main-color;
+      margin-bottom: 1.2rem;
+    }
+  }
+  &__logo {
+    margin-bottom: 1rem;
+  }
+  &__line {
+    border: 1px solid #c4c4c4;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__link {
+    font-size: variables.$text-font-size;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: variables.$button-bg-color;
+    }
+  }
+  &__social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: #d5d5d5;
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+    img {
+      height: 58%;
+    }
+    &:hover {
+      background-color: variables.$button-bg-color;
+    }
+  }
+  &__rights {
+    padding: 1rem 0;
+    text-align: center;
+    font-size: variables.$text-font-size;
+    &-link {
+      color: variables.$button-bg-color;
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .footer {
+    &__inner {
+      gap: 3rem;
+    }
+  }
+}

@@ -1,3 +1,4 @@
+@use "mixins";
 @use "variables";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500&family=Raleway:wght@500&display=swap");
 html {
@@ -22,11 +23,17 @@ body {
   background-color: variables.$button-bg-color;
   padding: 0.7rem 1.85rem;
   border-radius: 1.25rem 0;
-  transition: outline 0.3s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  outline: 5px solid transparent;
+  transition: border 0.3s ease-in-out, color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+  border: 5px solid transparent;
   &:hover {
     color: variables.$button-bg-color;
     background-color: variables.$button-main-color;
-    outline-color: variables.$button-bg-color;
+    border-color: variables.$button-bg-color;
+  }
+}
+@media (min-width: 1921px) {
+  html {
+    font-size: 1vw;
   }
 }

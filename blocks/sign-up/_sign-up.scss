@@ -1,0 +1,52 @@
+@use "../../scss/mixins" as mixins;
+@use "../../scss/variables" as variables;
+@use "../sign-up-form/sign-up-form";
+.sign-up {
+  position: relative;
+  padding: 5rem 0;
+  &__title {
+    @include mixins.title;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  &__line {
+    max-width: 30rem;
+    margin: 0 auto 2rem;
+    border: 1px solid #c4c4c4;
+  }
+  &__description {
+    max-width: 37rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 10rem;
+    height: 7.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &::before {
+    background-image: url(../blocks/sign-up/img/sign-up-form__decor-dots-1.svg);
+    bottom: -8%;
+    left: 0;
+  }
+  &::after {
+    background-image: url(../blocks/sign-up/img/sign-up-form__decor-dots-2.svg);
+    top: -9%;
+    right: 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .sign-up {
+    &__title {
+      @include mixins.title-mob;
+    }
+    &::after {
+      top: -5%;
+    }
+  }
+}

@@ -1,0 +1,176 @@
+@use "../../scss/mixins" as mixins;
+@use "../../scss/variables" as variables;
+@use "../progress-bar/progress-bar";
+.header {
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  background-color: variables.$bg-color-1;
+  &__inner {
+    padding: 0.7rem 0 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    flex-shrink: 0;
+    height: 2.9rem;
+    @include mixins.image-contain;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+  }
+  &__nav-links {
+    gap: 1vw;
+    display: flex;
+  }
+  &__nav-link {
+    padding: 0 1vw;
+    font-weight: variables.$font-weight-semibold;
+    font-size: 1rem;
+    color: variables.$titles-main-color;
+    border: 3px solid transparent;
+    border-radius: 1rem;
+    transition: border-color 0.3s ease-in-out, color 0.2s ease-in-out;
+    &:hover {
+      color: variables.$button-hover-color;
+      border-color: variables.$button-bg-color;
+    }
+  }
+  &__sign-up-button {
+    flex-shrink: 0;
+    font-weight: variables.$font-weight-semibold;
+    font-size: 1rem;
+    padding: 3px 19px;
+    border-radius: 15px 0px;
+    color: variables.$button-main-color;
+    background-color: variables.$header-signUp-button-bg;
+    border: 3px solid transparent;
+  }
+  &__menu-toggle {
+    display: none;
+  }
+}
+.mob-nav__wrapper {
+  display: none;
+}
+@media (max-width: 575.98px) {
+  .header {
+    &__inner {
+      justify-content: flex-start;
+      gap: calc((80vw - 10rem - 30px) / 2);
+    }
+    &__nav {
+      display: none;
+    }
+    &__menu-toggle {
+      display: block;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none;
+      &:hover {
+        cursor: pointer;
+      }
+      span {
+        display: block;
+        width: 29px;
+        height: 3px;
+        margin-bottom: 5px;
+        position: relative;
+        background: variables.$text-main-color;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+          background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+          opacity 0.55s ease;
+
+        &:first-child {
+          transform-origin: 0% 0%;
+        }
+
+        &:last-child {
+          transform-origin: 0% 100%;
+        }
+      }
+
+      input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+        -webkit-touch-callout: none;
+      }
+    }
+  }
+  .mob-nav__wrapper {
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    background: #eeeeee82;
+    position: fixed;
+    z-index: 6;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .mob-nav {
+    position: relative;
+    height: 100%;
+    width: 0;
+    background-color: variables.$bg-color-2;
+    transition: width 0.2s ease-in-out;
+  }
+  .mob-nav__inner {
+    position: relative;
+    top: 25vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  .mob-nav__links {
+    display: flex;
+    gap: 1.8vh;
+    flex-direction: column;
+  }
+  .mob-nav__link {
+    padding: 0 1vw;
+    font-weight: variables.$font-weight-semibold;
+    font-size: 1rem;
+    color: variables.$titles-main-color;
+    border: 3px solid transparent;
+    border-radius: 1rem;
+    transition: border-color 0.3s ease-in-out, color 0.2s ease-in-out;
+    &:hover {
+      color: variables.$button-hover-color;
+      border-color: variables.$button-bg-color;
+    }
+  }
+  .mob-nav__sign-up-button {
+    flex-shrink: 0;
+    font-weight: variables.$font-weight-semibold;
+    font-size: 1rem;
+    padding: 3px 19px;
+    border-radius: 15px 0px;
+    color: variables.$button-main-color;
+    background-color: variables.$header-signUp-button-bg;
+    border: 3px solid transparent;
+  }
+  .mob-nav__close-btn {
+    position: absolute;
+    top: 3%;
+    right: 10%;
+    font-size: 40px;
+  }
+}

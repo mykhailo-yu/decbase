@@ -1,0 +1,86 @@
+@use "../../scss/mixins" as mixins;
+@use "../../scss/variables" as variables;
+.completed-work {
+  background-color: variables.$bg-color-2;
+  margin-top: 10rem;
+  padding: 5rem 0;
+  &__title {
+    @include mixins.title;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  &__diagram {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7rem;
+  }
+  &__diagram-item {
+    position: relative;
+    box-sizing: border-box;
+    padding: 3.1rem 0;
+    text-align: center;
+    border-radius: 2.5rem 0rem;
+    background: variables.$items-bg-color;
+    box-shadow: 0px 13px 16px 0px rgba(0, 0, 0, 0.1);
+    &-number {
+      font-weight: variables.$font-weight-bold;
+      color: variables.$titles-main-color;
+      font-size: 3.125rem;
+    }
+    &-text {
+      font-weight: variables.$font-weight-semibold;
+      font-size: variables.$text-font-size;
+      width: 12rem;
+    }
+
+    &:not(:last-child):after {
+      position: absolute;
+      content: "";
+      width: 130%;
+      height: 65%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      left: 12rem;
+    }
+    &:nth-child(2n) {
+      top: 6rem;
+    }
+    &:first-child:after {
+      background-image: url(../blocks/completed-work/img/completed-work-line-1.svg);
+      top: 5vw;
+    }
+    &:nth-child(2):after {
+      background-image: url(../blocks/completed-work/img/completed-work-line-2.svg);
+      top: -1vw;
+    }
+    &:nth-child(3):after {
+      background-image: url(../blocks/completed-work/img/completed-work-line-3.svg);
+      top: 50%;
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .completed-work {
+    margin-top: 5rem;
+    &__title {
+      @include mixins.title-mob;
+    }
+    &__diagram {
+      flex-direction: column;
+      gap: 2rem;
+      padding: 0;
+    }
+    &__diagram-item {
+      margin: 0 auto;
+      width: 75%;
+      top: 0 !important;
+      &::after {
+        display: none;
+      }
+      &-text {
+        width: unset;
+      }
+    }
+  }
+}
