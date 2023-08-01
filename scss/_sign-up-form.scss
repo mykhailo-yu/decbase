@@ -23,8 +23,12 @@
     font-family: 'Raleway', sans-serif;
     font-weight: variables.$font-weight-medium;
     font-size: variables.$text-font-size;
+    transition: border 0.2s ease-in-out;
     &[type="email"] {
         width: 100%;
+    }
+    &--invalid {
+      border: 1px solid rgb(201, 0, 0);
     }
   }
   &__button {

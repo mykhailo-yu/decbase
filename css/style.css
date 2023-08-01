@@ -715,9 +715,14 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
 }
 .sign-up-form__input[type=email] {
   width: 100%;
+}
+.sign-up-form__input--invalid {
+  border: 1px solid rgb(201, 0, 0);
 }
 .sign-up-form__button {
   border-top-left-radius: 0;
