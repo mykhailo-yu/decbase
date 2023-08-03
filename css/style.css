@@ -62,7 +62,7 @@ body {
 }
 .progress-bar {
   width: 0;
-  height: 5px;
+  height: 0.3rem;
   background-color: #37806b;
   -webkit-transition: width 0.2s ease-out;
   transition: width 0.2s ease-out;
@@ -70,7 +70,7 @@ body {
 .progress-bar__wrapper {
   background-color: #f8f8f8;
   width: 100%;
-  height: 5px;
+  height: 0.3rem;
 }
 
 .header {
@@ -136,8 +136,8 @@ body {
       flex-shrink: 0;
   font-weight: 600;
   font-size: 1rem;
-  padding: 3px 19px;
-  border-radius: 15px 0px;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem 0;
   color: #fff;
   background-color: #caa892;
   border: 3px solid transparent;
@@ -309,6 +309,9 @@ body {
 }
 .modern-interior__image {
   position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
 }
 .modern-interior__image img {
   width: 100%;
@@ -701,9 +704,23 @@ body {
 }
 .completed-work__diagram-item {
   position: relative;
+  width: 12vw;
+  height: 12vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 3.1rem 0;
   text-align: center;
   border-radius: 2.5rem 0rem;
   background: #fff;
@@ -720,30 +737,11 @@ body {
   font-size: 1.125rem;
   width: 12rem;
 }
-.completed-work__diagram-item:not(:last-child):after {
+.completed-work__diagram-item-svg {
   position: absolute;
-  content: "";
-  width: 130%;
-  height: 65%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  left: 12rem;
 }
 .completed-work__diagram-item:nth-child(2n) {
-  top: 6rem;
-}
-.completed-work__diagram-item:first-child:after {
-  background-image: url(../blocks/completed-work/img/completed-work-line-1.svg);
-  top: 5vw;
-}
-.completed-work__diagram-item:nth-child(2):after {
-  background-image: url(../blocks/completed-work/img/completed-work-line-2.svg);
-  top: -1vw;
-}
-.completed-work__diagram-item:nth-child(3):after {
-  background-image: url(../blocks/completed-work/img/completed-work-line-3.svg);
-  top: 50%;
+  top: 6vw;
 }
 
 @media (max-width: 575.98px) {
@@ -792,6 +790,13 @@ body {
 .testimonials-slider__btns button {
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
+  width: 3rem;
+}
+.testimonials-slider__btns button img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .testimonials-slider__btns button:hover {
   opacity: 0.7;
@@ -941,8 +946,8 @@ body {
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 40%;
-          flex: 0 1 40%;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
 }
 .latest-news__item-image {
   position: relative;
@@ -978,7 +983,7 @@ body {
 .latest-news__item-title {
   margin-top: 2.6rem;
   color: #212121;
-  font-size: 1.875rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 .latest-news__item-description {
@@ -1174,6 +1179,13 @@ body {
 }
 .footer__logo {
   margin-bottom: 1rem;
+  width: 45%;
+}
+.footer__logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .footer__line {
   border: 1px solid #c4c4c4;
@@ -1253,7 +1265,6 @@ body {
   background-color: #f8f8f8;
   -webkit-box-shadow: 0px 13px 16px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 13px 16px 0px rgba(0, 0, 0, 0.1);
-  border: 2px solid #646464;
   border-radius: 1rem;
   width: 25vw;
   text-align: center;

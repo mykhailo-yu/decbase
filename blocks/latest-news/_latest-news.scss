@@ -19,7 +19,7 @@
   &__item {
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
-    flex: 0 1 40%;
+    flex: 0 1 45%;
     &-image {
       @include mixins.image-cover;
       @include mixins.image-decor;
@@ -40,7 +40,7 @@
     &-title {
       margin-top: 2.6rem;
       color: variables.$titles-main-color;
-      font-size: 1.875rem;
+      font-size: 1.6rem;
       font-weight: variables.$font-weight-semibold;
     }
     &-description {

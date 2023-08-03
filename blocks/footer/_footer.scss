@@ -21,6 +21,8 @@
   }
   &__logo {
     margin-bottom: 1rem;
+    width: 45%;
+    @include mixins.image-contain;
   }
   &__line {
     border: 1px solid #c4c4c4;

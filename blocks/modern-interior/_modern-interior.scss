@@ -15,6 +15,7 @@
     @include mixins.image-cover;
     @include mixins.image-decor;
     position: relative;
+    flex: 0 0 50%;
     img {
       border-radius: variables.$image-decor-border-radius-1;
     }

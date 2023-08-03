@@ -1,6 +1,6 @@
 @use "../../scss/mixins" as mixins;
 @use "../../scss/variables" as variables;
-$height: 5px;
+$height: 0.3rem;
 .progress-bar {
     &__wrapper {
         background-color: variables.$bg-color-2;
