@@ -56,7 +56,7 @@
 .mob-nav__wrapper {
   display: none;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .header {
     &__inner {
       justify-content: flex-start;
@@ -172,5 +172,12 @@
     top: 3%;
     right: 10%;
     font-size: 40px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .header {
+    &__nav-links {
+      gap: 0;
+    }
   }
 }

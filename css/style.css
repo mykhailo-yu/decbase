@@ -150,7 +150,7 @@ body {
   display: none;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .header__inner {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -287,6 +287,11 @@ body {
     font-size: 40px;
   }
 }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .header__nav-links {
+    gap: 0;
+  }
+}
 .modern-interior {
   margin-top: 100px;
 }
@@ -378,6 +383,20 @@ body {
   }
   .modern-interior__image::after {
     border-radius: 3rem 0rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .modern-interior {
+    margin-top: 3rem;
+  }
+  .modern-interior__inner {
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+  .modern-interior__title {
+    font-size: 2.5rem;
+    line-height: unset;
   }
 }
 .our-services {
@@ -525,6 +544,38 @@ body {
     font-size: 2rem;
   }
 }
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .our-services {
+    margin-top: 5rem;
+  }
+  .our-services__filter-buttons {
+    gap: 1rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .our-services__filter-btn {
+    width: 5rem;
+  }
+  .our-services__items {
+    margin: 2rem 0;
+  }
+  .our-services__item {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+  }
+  .our-services__title {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .our-services__filter-buttons {
+    gap: 2rem;
+  }
+}
 .about-us {
   margin-top: 6rem;
 }
@@ -605,6 +656,28 @@ body {
     display: none;
   }
 }
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .about-us__inner {
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+  .about-us__info {
+    padding: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+  }
+  .about-us__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+  }
+  .about-us__title {
+    font-size: 2.5rem;
+    line-height: unset;
+  }
+}
 .successful-working {
   margin-top: 10rem;
 }
@@ -676,6 +749,27 @@ body {
   .successful-working__image {
     display: none;
   }
+  .successful-working__transparent-text {
+    font-size: 12rem;
+    line-height: 10rem;
+  }
+  .successful-working__title {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .successful-working {
+    margin-top: 5rem;
+  }
+  .successful-working__inner {
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+  .successful-working__transparent-text {
+    font-size: 12rem;
+    line-height: 10rem;
+  }
   .successful-working__title {
     font-size: 2rem;
   }
@@ -745,6 +839,15 @@ body {
 }
 
 @media (max-width: 575.98px) {
+  .completed-work__diagram-item {
+    width: 30vw;
+    height: 30vw;
+  }
+  .completed-work__diagram-item-number {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 767.98px) {
   .completed-work {
     margin-top: 5rem;
   }
@@ -752,16 +855,18 @@ body {
     font-size: 2rem;
   }
   .completed-work__diagram {
+    margin-left: 15vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 2rem;
     padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .completed-work__diagram-item {
-    margin: 0 auto;
-    width: 75%;
     top: 0 !important;
   }
   .completed-work__diagram-item::after {
@@ -769,6 +874,30 @@ body {
   }
   .completed-work__diagram-item-text {
     width: unset;
+  }
+  .completed-work__diagram-item:nth-child(2n) {
+    left: 30vw;
+  }
+  .completed-work__diagram-item-svg {
+    display: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .completed-work__diagram-item {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .completed-work {
+    margin-top: 5rem;
+  }
+  .completed-work__title {
+    font-size: 2rem;
+  }
+  .completed-work__diagram-item {
+    width: 17vw;
+    height: 17vw;
   }
 }
 .testimonials-slider {
@@ -856,7 +985,10 @@ body {
   font-weight: 400;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
+  .testimonials-slider .swiper {
+    margin: 0;
+  }
   .testimonials-slider__item-wrapper {
     padding: 0 1.4rem;
   }
@@ -885,7 +1017,9 @@ body {
     height: 1.5rem;
   }
   .testimonials-slider__btns {
+    top: 80%;
     right: calc(50% - 4rem);
+    z-index: 2;
   }
 }
 .testimonials {
@@ -948,6 +1082,16 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 45%;
           flex: 0 1 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .latest-news__item-image {
   position: relative;
@@ -1084,7 +1228,7 @@ body {
   border-top-left-radius: 0;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .sign-up-form {
     gap: 1rem;
   }
@@ -1179,7 +1323,7 @@ body {
 }
 .footer__logo {
   margin-bottom: 1rem;
-  width: 45%;
+  width: 10rem;
 }
 .footer__logo img {
   width: 100%;
@@ -1249,7 +1393,7 @@ body {
   color: #37806b;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .footer__inner {
     gap: 3rem;
   }
@@ -1277,10 +1421,15 @@ body {
   font-size: 3rem;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .is-user-here {
     width: 75vw;
     left: calc(50% - 37.5vw);
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .is-user-here {
+    width: 30vw;
   }
 }
 .congratulations {
@@ -1290,6 +1439,9 @@ body {
   text-align: center;
   margin: 20vh auto 0;
   width: 60%;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 .congratulations__wrapper {
   display: none;
@@ -1305,7 +1457,7 @@ body {
   transition: opacity 0.2s ease-in-out;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 992px) {
   .congratulations {
     font-size: 2rem;
   }

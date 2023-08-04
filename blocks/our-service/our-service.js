@@ -6,7 +6,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
   .then((data) => {
     posts = data;
     resetItems();
-});
+  });
 function filterObjectByUsers(key) {
   return posts.filter((el) => el.userId == key);
 }

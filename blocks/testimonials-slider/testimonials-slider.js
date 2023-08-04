@@ -8,11 +8,12 @@ const swiper = new Swiper(".swiper", {
   breakpoints: {
     0: {
       slidesPerView: 1,
-      spaceBetween: 5
+      spaceBetween: 5,
+      slidesPerGroup: 1,
     },
     992: {
       slidesPerView: 2,
-      spaceBetween: 10
+      spaceBetween: 10,
     },
   },
   // Navigation arrows

@@ -5,16 +5,16 @@ const closeBtn = document.querySelector(".mob-nav__close-btn");
 const links = document.querySelectorAll(".mob-nav__link");
 menuToggle.addEventListener("click", openNav);
 closeBtn.addEventListener("click", closeNav);
-links.forEach((el)=>{
-    el.addEventListener("click", ()=>{
-        closeNav();
-    })
-})
+links.forEach((el) => {
+  el.addEventListener("click", () => {
+    closeNav();
+  });
+});
 navWrapper.addEventListener("click", (event) => {
   let isClickInsideMenu = nav.contains(event.target);
-    if (!isClickInsideMenu) {
-      closeNav();
-    }
+  if (!isClickInsideMenu) {
+    closeNav();
+  }
 });
 function openNav() {
   nav.parentElement.style.display = "block";

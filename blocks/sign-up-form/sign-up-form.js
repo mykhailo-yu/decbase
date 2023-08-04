@@ -13,9 +13,11 @@ form.addEventListener("submit", () => {
   username.value = "";
   surname.value = "";
   email.value = "";
-  [surname, username, email].forEach(()=>{removeEventListener("input",()=>{})});
+  [surname, username, email].forEach(() => {
+    removeEventListener("input", () => {});
+  });
 });
-button.addEventListener("click", ()=>{
+button.addEventListener("click", () => {
   checkValidity();
   [surname, username, email].forEach((el) => {
     el.addEventListener("input", () => {
@@ -68,9 +70,11 @@ function congratulation(name) {
   congratulationsWrapper.style.display = "block";
   setTimeout(() => {
     congratulationsWrapper.style.opacity = "1";
+    congratulationsWrapper.firstElementChild.style.opacity = "1";
   }, 300);
   setTimeout(() => {
     congratulationsWrapper.style.opacity = "0";
+    congratulationsWrapper.firstElementChild.style.opacity = "0";
     setTimeout(() => {
       congratulationsWrapper.style.display = "none";
     }, 300);

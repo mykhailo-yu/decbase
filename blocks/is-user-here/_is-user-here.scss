@@ -20,9 +20,14 @@
     font-size: variables.$title-font-size;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .is-user-here {
     width: 75vw;
     left: calc(50% - 37.5vw);
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .is-user-here {
+    width: 30vw;
   }
 }

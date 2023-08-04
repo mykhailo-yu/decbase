@@ -42,6 +42,25 @@
     &__image {
       display: none;
     }
+    &__transparent-text {
+      font-size: 12rem;
+      line-height: 10rem;
+    }
+    &__title {
+      @include mixins.title-mob;
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .successful-working {
+    margin-top: 5rem;
+    &__inner {
+      align-items: unset;
+    }
+    &__transparent-text {
+      font-size: 12rem;
+      line-height: 10rem;
+    }
     &__title {
       @include mixins.title-mob;
     }

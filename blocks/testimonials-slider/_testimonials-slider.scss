@@ -69,8 +69,11 @@
     font-weight: variables.$font-weight-normal;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .testimonials-slider {
+    .swiper {
+      margin: 0;
+    }
     &__item-wrapper {
       padding: 0 1.4rem;
     }
@@ -99,7 +102,9 @@
       }
     }
     &__btns {
+      top: 80%;
       right: calc(50% - 4rem);
+      z-index: 2;
     }
   }
 }

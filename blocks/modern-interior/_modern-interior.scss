@@ -62,3 +62,15 @@
     }
   }
 }
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .modern-interior {
+    margin-top: 3rem;
+    &__inner {
+      align-items: unset;
+    }
+    &__title {
+      font-size: 2.5rem;
+      line-height: unset;
+    }
+  }
+}
