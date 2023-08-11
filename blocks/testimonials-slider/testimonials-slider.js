@@ -13,6 +13,7 @@ const swiper = new Swiper(".swiper", {
     },
     992: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 10,
     },
   },

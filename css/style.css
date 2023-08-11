@@ -329,7 +329,7 @@ body {
   z-index: -1;
   content: "";
   width: 100%;
-  height: 98%;
+  height: 100%;
   border: 2px solid #caa892;
   border-radius: 8.75rem 0rem;
 }
@@ -629,7 +629,7 @@ body {
   z-index: -1;
   content: "";
   width: 100%;
-  height: 98%;
+  height: 100%;
   border: 2px solid #caa892;
   border-radius: 8.75rem 0rem;
 }
@@ -730,7 +730,7 @@ body {
   z-index: -1;
   content: "";
   width: 100%;
-  height: 98%;
+  height: 100%;
   border: 2px solid #caa892;
   border-radius: 8.75rem 0rem;
 }
@@ -1109,7 +1109,7 @@ body {
   z-index: -1;
   content: "";
   width: 100%;
-  height: 98%;
+  height: 100%;
   border: 2px solid #caa892;
   border-radius: 8.75rem 0rem;
 }
